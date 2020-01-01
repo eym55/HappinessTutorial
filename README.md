@@ -999,7 +999,6 @@ standardized_country_df.head()
     }
 </style>
 <table border="1" class="dataframe">
-  <thead>
     <tr style="text-align: right;">
       <th></th>
       <th>Country</th>
@@ -1167,7 +1166,7 @@ fig2 = countries_df['Happiness Score'].plot.hist(bins = 15, ax = ax[1], title="D
 ```
 
 
-![png](output_31_0.png)
+![png](Visualizations/output_31_0.png)
 
 
 From these graphs, it's clear that the happiness scores follow a somewhat normal distribution. The mean value is about 5.2 with a range of 2.8 to 7.8. There doesn't appear to be much of a skew and there are not many outliers. 
@@ -1187,7 +1186,7 @@ countries_df.groupby('Region')['Happiness Score'].mean().sort_values().plot.bar(
 
 
 
-![png](output_33_1.png)
+![png](Visualizations/output_33_1.png)
 
 
 It's clear that there is a relationship between region and mean happiness score. The happiest regions also happen to be the wealthiest regions which is a relationship that will become more obvious as we do more analysis. 
@@ -1212,7 +1211,7 @@ happiness_corr_df.plot.bar(title = 'Largest Correlation Values for Happiness Sco
 
 
 
-![png](output_35_1.png)
+![png](Visualizations/output_35_1.png)
 
 
 This graph shows us that high values for life expectancy at birth, internet users per capita, and GDP per capita are good indicators of a happy country. Good indicators of an unhappy country are high infant mortality rate, total fertility rate, and unemployment rate. It is interesting to see birth rate and total fertility rate as indicators of an unhappy country and not a category like children under the age of 5 underweight. Internet users per capita was also a surprising one to us as one of the strongest indicators as we figured there would be some other categories that would be more telling.
@@ -1325,7 +1324,7 @@ plt.show()
 
 
 
-![png](output_41_1.png)
+![png](Visualizations/output_41_1.png)
 
 
 Wealthy countries like the United States, Canada, Australia, and a lot of northern Europe are very happy. Africa is the clear saddest continent which makes sense as there are a lot of poverty-ridden areas there. Asia is also not very happy.
@@ -2564,7 +2563,7 @@ plt.show()
 ```
 
 
-![png](output_71_0.png)
+![png](Visualizations/output_71_0.png)
 
 
 We can also make some bar charts with some of the more interesting data collected. Shown below is the median household income by state, life expectancy by state, and unemployment rate by state. All of this was found by finding the mean of the counties for each state.
@@ -2577,7 +2576,7 @@ ax1 = county_merge2_df.groupby('State')['Median_Household_Income_2017'].mean().s
 ```
 
 
-![png](output_73_0.png)
+![png](Visualizations/output_73_0.png)
 
 
 
@@ -2587,7 +2586,7 @@ ax2 = county_merge2_df.groupby('State')['Life expectancy, 2014'].mean().sort_val
 ```
 
 
-![png](output_74_0.png)
+![png](Visualizations/output_74_0.png)
 
 
 
@@ -2597,7 +2596,7 @@ ax2 = county_merge2_df.groupby('State')['Unemployment_rate_2018'].mean().sort_va
 ```
 
 
-![png](output_75_0.png)
+![png](Visualizations/output_75_0.png)
 
 
 It is clear that life expectancy is not very interesting at all, but household income and unemployment rate yield some more interesting figures. I find it interesting that DC is towards the top of both household income and unemployment.
@@ -2710,7 +2709,7 @@ country_rmse
 
 
 
-![png](output_87_1.png)
+![png](Visualizations/output_87_1.png)
 
 
 The graph above shows the actual versus the predicted value for happiness score for each of the countries that the lasso model attempted to predict. The average root mean squared error here for our actual versus predicted score is around 0.5 which is not fantastic. However, because we are only able to train on a small amount of countries, it is not too awful. If there were thousands of countries in the world that we could test on, our prediction would most likely yield more accurate results. 
@@ -2899,7 +2898,7 @@ plt.show()
 
 
 
-![png](output_96_1.png)
+![png](Visualizations/output_96_1.png)
 
 
 This graph represents the conclusion of our project. We have successfully predicted the happiness of each and every county in the United States using a lasso model fitted to country happiness. As we discussed earlier, the model has the inherent flaw on only being able to train on a minimal number of countries, but we believe that the knowledge to be gained from this graph are still insightful. As you can see, the Northeast, coastal California, and some areas with major cities nearby are generally the happiest. There is a low point in the country near the Southeast (towards Louisiana) and Mideast (around West Virginia). We now have a predicted happiness for every county in the United States.
