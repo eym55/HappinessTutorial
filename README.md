@@ -2,7 +2,7 @@
 # Final Tutorial: The Happiness Project
 
 ## Intro
-This project is a collaboration between Matt Catalano and Eli Mendels for our Data Science class with Nick Mattei. We will be examining what metrics correspond to national happiness and then trying to predict which counties in the US will be the happiest.
+This project is a collaboration between Eli Mendels and Matt Catralano for our Data Science class with Nick Mattei. We will be examining what metrics correspond to national happiness and then trying to predict which counties in the US will be the happiest.
 
 ## Housekeeping Stuff
 
